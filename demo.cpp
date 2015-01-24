@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
    }
    else
    {
-      Node_t & node = root.XPath(argv[3]);
+      Node_t & node = root[argv[3]];
       if(node.valid()) node.Print(); /* default stdout */
       else printf("%s\n", xml.error.msg.data());
    }

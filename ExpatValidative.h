@@ -100,28 +100,3 @@ struct Attr_t
 
    Node_t *parent;
 };
-
-#define spcch(ch) (' ' == ch || '\t' == ch || '\r' == ch || '\n' == ch)
-
-struct Environ_t
-{
-   Environ_t(Doc_t *doc);
-
-   int level;
-   Doc_t *doc;
-   Node_t *cur;
-   Node_t *root;
-
-   ~Environ_t();
-};
-
-struct Content
-{
-   enum Value
-   {
-      XmlStr,
-      FilePath
-   };
-};
-
-typedef Content::Value Content_t;
